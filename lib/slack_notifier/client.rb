@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "httparty"
+require "json"
 
 module SlackNotifier
   # Client class responsible for sending messages to Slack
