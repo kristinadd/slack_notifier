@@ -2,15 +2,25 @@ PATH
   remote: .
   specs:
     slack_notifier (0.1.0)
+      httparty (~> 0.21)
 
 GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.3)
+    bigdecimal (3.3.1)
+    csv (3.3.5)
     diff-lcs (1.6.2)
+    httparty (0.23.2)
+      csv
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     json (2.15.1)
     language_server-protocol (3.17.0.5)
     lint_roller (1.1.0)
+    mini_mime (1.1.5)
+    multi_xml (0.7.2)
+      bigdecimal (~> 3.1)
     parallel (1.27.0)
     parser (3.3.9.0)
       ast (~> 2.4.1)

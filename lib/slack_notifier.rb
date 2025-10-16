@@ -1,12 +1,17 @@
 # frozen_string_literal: true
 
 require_relative "slack_notifier/version"
+
+module SlackNotifier
+  class Error < StandardError; end
+end
+
+# Require other files after Error is defined
 require_relative "slack_notifier/configuration"
 require_relative "slack_notifier/client"
 require_relative "slack_notifier/message"
 
 module SlackNotifier
-  class Error < StandardError; end
 
   class << self
     # @return [Configuration] the global configuration object
