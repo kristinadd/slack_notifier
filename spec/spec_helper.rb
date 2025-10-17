@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 require "slack_notifier"
+require "webmock/rspec"
 
 RSpec.configure do |config|
+  # Disable real HTTP connections during tests
+  WebMock.disable_net_connect!(allow_localhost: true)
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = ".rspec_status"
 
