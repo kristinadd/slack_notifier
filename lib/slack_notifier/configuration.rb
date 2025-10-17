@@ -23,15 +23,11 @@ module SlackNotifier
       @channel = nil
     end
 
-    # Validates that required configuration is present
-    #
-    # @raise [ConfigurationError] if webhook_url is not set
     def validate!
       raise ConfigurationError, "webhook_url is required" if webhook_url.nil? || webhook_url.empty?
     end
   end
 
-  # Custom error class for configuration issues
   class ConfigurationError < Error; end
 end
 
