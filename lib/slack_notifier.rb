@@ -1,17 +1,10 @@
 # frozen_string_literal: true
 
 require_relative "slack_notifier/version"
-
-module SlackNotifier
-  class Error < StandardError; end
-end
-
 require_relative "slack_notifier/configuration"
 require_relative "slack_notifier/client"
 require_relative "slack_notifier/message"
-
 module SlackNotifier
-
   class << self
     attr_writer :configuration
 
