@@ -1,11 +1,5 @@
 # frozen_string_literal: true
-
 module SlackNotifier
-  # Message class for creating formatted Slack messages
-  #
-  # @example
-  #   message = SlackNotifier::Message.success("Deployment completed!")
-  #   client.notify(message.text, attachments: message.attachments)
   class Message
     COLORS = {
       success: "good",      # Green
@@ -64,4 +58,3 @@ module SlackNotifier
     end
   end
 end
-

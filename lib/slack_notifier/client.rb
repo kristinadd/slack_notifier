@@ -29,9 +29,6 @@ module SlackNotifier
       )
 
       response.success?
-    rescue StandardError => e
-      handle_error(e)
-      false
     end
 
     private
@@ -49,8 +46,5 @@ module SlackNotifier
       payload
     end
 
-    def handle_error(error)
-      warn "SlackNotifier Error: #{error.class} - #{error.message}"
-    end
   end
 end
