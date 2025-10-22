@@ -2,7 +2,7 @@
 module SlackNotifier
   class Configuration
     attr_accessor :webhook_url
-    attr_accessor :user_name
+    attr_accessor :username
     attr_accessor :channel
 
     def initialize

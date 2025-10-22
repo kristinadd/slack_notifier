@@ -6,7 +6,11 @@ require_relative "slack_notifier/client"
 require_relative "slack_notifier/message"
 module SlackNotifier
   class << self
-    attr_writer :configuration
+    # attr_writer :configuration
+
+    def configuration=(value) # posponing the syntactic sugar for a moment
+      @configuration = value
+    end
 
     def configure
       yield(configuration)
@@ -17,7 +21,7 @@ module SlackNotifier
     end
 
     def reset_configuration!
-      @configuration = Configuration.new
+      self.configuration = Configuration.new
     end
 
     def notify(text, options = {})
