@@ -2,13 +2,7 @@
 
 require "httparty"
 require "json"
-
 module SlackNotifier
-  # Client class responsible for sending messages to Slack
-  #
-  # @example
-  #   client = SlackNotifier::Client.new
-  #   client.notify("Hello from SlackNotifier!")
   class Client
     include HTTParty
 
